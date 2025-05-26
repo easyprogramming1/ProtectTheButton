@@ -20,7 +20,6 @@ public class theButtonScript : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                Debug.Log("Clicked with new input system: " + gameObject.name);
                 StartCoroutine(DoSomething());
             }
         }
