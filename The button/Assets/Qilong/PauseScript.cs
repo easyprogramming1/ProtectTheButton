@@ -25,15 +25,17 @@ public class PauseScript : MonoBehaviour
             //Time.timeScale = 1f;
             Pausthings.SetActive(false);
             PausthingsTrue = false;
+            Time.timeScale = 1;
         }
 
     }
 
     public IEnumerator OpenToClose()
     {
+        Time.timeScale = 0;
         Debug.Log("Leo");
         Pausthings.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSecondsRealtime(0.5f);
         PausthingsTrue = true;
 
     }
