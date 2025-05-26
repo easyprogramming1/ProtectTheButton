@@ -1,10 +1,12 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using static Unity.Collections.AllocatorManager;
 
 public class QuitFunction : MonoBehaviour
 {
     [SerializeField] string SceneToChange;
-
 
     public void SceneChangeFunction()
     {
@@ -16,4 +18,6 @@ public class QuitFunction : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+
+    
 }
