@@ -30,7 +30,7 @@ public class StraightEnemyScript : MonoBehaviour
             }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "bullet")
         {
@@ -38,7 +38,7 @@ public class StraightEnemyScript : MonoBehaviour
         }
         if(collision.transform.tag == "Button")
         {
-            Debug.Log("ded");
+            Destroy(gameObject);
         }
     }
 
