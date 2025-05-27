@@ -56,4 +56,9 @@ public class ShopSystem : MonoBehaviour
         }
 
     }
+
+    public void print()
+    {
+        Debug.Log("leo");
+    }
 }

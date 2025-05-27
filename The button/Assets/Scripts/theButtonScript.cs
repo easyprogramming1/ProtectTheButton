@@ -72,6 +72,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void potholding()
     {
+        print("Leo");
         if (!holdingPot && coins >= 50)
         {
             holdingPot = true;
