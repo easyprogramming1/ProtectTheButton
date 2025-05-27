@@ -9,21 +9,25 @@ public class StraightEnemyScript : MonoBehaviour
 {
     public Transform button;
     public float speed;
+    public float ogspeed;
     public bool bigenemy;
     public float hp;
     Rigidbody2D eig;
+    public float speedchanger;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         button = GameObject.Find("The Button").transform;
         eig = GetComponent<Rigidbody2D>();
+        ogspeed = speed;
+        speedchanger = GameObject.Find("enemy spawner").GetComponent<enemyspawner>().speedchanger;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, button.transform.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, button.transform.position, speed * Time.deltaTime * speedchanger);
         if((button.transform.position.x - transform.position.x) < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
@@ -33,6 +37,7 @@ public class StraightEnemyScript : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
+    
     public void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -97,6 +102,7 @@ public class StraightEnemyScript : MonoBehaviour
         }
         if (collision.transform.tag == "Button")
         {
+            button.BroadcastMessage("dead");
             Destroy(gameObject);
         }
 
