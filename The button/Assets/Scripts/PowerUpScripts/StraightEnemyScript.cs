@@ -18,6 +18,14 @@ public class StraightEnemyScript : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = Vector3.MoveTowards(transform.position, button.transform.position, speed * Time.deltaTime);
+        if((button.transform.position.x - transform.position.x) < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
     }
     public void Update()
     {
