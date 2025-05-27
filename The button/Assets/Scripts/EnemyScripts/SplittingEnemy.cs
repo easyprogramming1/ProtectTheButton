@@ -14,7 +14,7 @@ public class SplittingEnemy : MonoBehaviour
     
     void Update()
     {
-        Vector2 _Direction = (transform.up + transform.right).normalized;
-        _enemyRb.linearVelocity = _Direction * _moveSpeed;
+        Vector2 _dir = (transform.up + transform.right).normalized;
+        _enemyRb.linearVelocity = _dir * _moveSpeed;
     }
 }
