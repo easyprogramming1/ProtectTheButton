@@ -9,6 +9,7 @@ TagManager:
   - bullet
   - point
   - Bplott
+  - lazer
   layers:
   - Default
   - TransparentFX
