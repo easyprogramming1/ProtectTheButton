@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class turret : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class turret : MonoBehaviour
     public Vector3 rotationer;
     public float shootspeed;
 
+
+    public Transform fromObject;
+    public Transform toObject;
+    public string targetTag = "Wall";
     public void Start()
     {
         StartCoroutine(shoot());
@@ -44,6 +49,11 @@ public class turret : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
+
+        Vector2 direction = closestEnemy.transform.position - transform.position;
+        float distance = direction.magnitude;
+
+       
     }
     public IEnumerator shoot()
     {
@@ -55,8 +65,17 @@ public class turret : MonoBehaviour
         StartCoroutine(shoot());
     }
 
-        GameObject GetClosestEnemy()
+    GameObject GetClosestEnemy()
     {
+        GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+        List<GameObject> matchingObjects = new List<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name == "1e")
+            {
+                matchingObjects.Add(obj);
+            }
+        }
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         GameObject closest = null;
         float minDistance = Mathf.Infinity;
