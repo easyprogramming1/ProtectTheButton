@@ -11,6 +11,9 @@ public class theButtonScript : MonoBehaviour
     public GameObject plott2;
     public GameObject plott3;
     public GameObject plott4;
+    public float coins;
+    public bool holdingTurret;
+    public bool holdingMorter;
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -23,9 +26,29 @@ public class theButtonScript : MonoBehaviour
                 StartCoroutine(DoSomething());
             }
         }
+        if (Input.GetKeyDown(KeyCode.M) && !holdingMorter)
+        {
+            holdingMorter = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.M))
+        {
+            holdingMorter = false;
+        }
+        if (Input.GetKeyDown(KeyCode.T) && !holdingTurret)
+        {
+            holdingTurret = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            holdingTurret = false;
+        }
+    }
+    public void AddCoin()
+    {
+        coins += 10;
     }
 
-    
+
     public IEnumerator DoSomething()
     {
         click = true;

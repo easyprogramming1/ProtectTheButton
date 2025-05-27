@@ -36,10 +36,11 @@ public class turret : MonoBehaviour
         {
             enemyPos = closest.transform.position;
             enenmytargeting = true;
+            Vector2 direction = closest.transform.position - transform.position;
+            float distance = direction.magnitude;
         }
         else
         {
-            Debug.Log("noEnemy");
             enenmytargeting = false;
         }
 
@@ -53,8 +54,6 @@ public class turret : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
 
-        Vector2 direction = closest.transform.position - transform.position;
-        float distance = direction.magnitude;
 
        
     }

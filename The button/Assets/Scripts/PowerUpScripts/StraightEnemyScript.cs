@@ -28,7 +28,7 @@ public class StraightEnemyScript : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                BroadcastMessage("AddCoin");
+                button.BroadcastMessage("AddCoin");
                 Destroy(gameObject);
 
             }
@@ -64,6 +64,7 @@ public class StraightEnemyScript : MonoBehaviour
     {
         if(collision.transform.tag == "bullet")
         {
+            button.BroadcastMessage("AddCoin");
             Destroy(gameObject);
         }
         if(collision.transform.tag == "Button")
