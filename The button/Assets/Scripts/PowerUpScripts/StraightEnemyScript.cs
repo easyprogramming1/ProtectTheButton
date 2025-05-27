@@ -28,8 +28,8 @@ public class StraightEnemyScript : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                Destroy(gameObject);
                 BroadcastMessage("AddCoin");
+                Destroy(gameObject);
 
             }
         }
