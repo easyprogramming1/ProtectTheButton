@@ -3,6 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class theButtonScript : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class theButtonScript : MonoBehaviour
     public bool morterBuy;
     public bool turretBuy;
     public bool emtyPot;
+
+    public TMP_Text TotalCoin;
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -49,6 +52,8 @@ public class theButtonScript : MonoBehaviour
         morterBuy = false;
         turretBuy = false;
         potBuy = false;
+
+        TotalCoin.text = "Total Coins: " + coins.ToString();
     }
     public void buyPot()
     {
