@@ -112,13 +112,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _button: {fileID: 0}
-  _rotationSpeed: 150
-  _moveSpeed: 5
+  _rotationSpeed: 7.5
+  _moveSpeed: 1
   _sightOffset: 0
   _angleAdjuster: 0
   _rotationAngle: 0
   _targetAngle: 0
   _angelDifference: 0
+  _addDegree: 1
 --- !u!1 &9182449015621497687
 GameObject:
   m_ObjectHideFlags: 0
