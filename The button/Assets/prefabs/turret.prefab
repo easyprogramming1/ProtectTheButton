@@ -318,7 +318,7 @@ MonoBehaviour:
   enenmytargeting: 0
   shootpoint: {fileID: 6928572875916496654}
   rotationer: {x: 0, y: 0, z: 0}
-  shootspeed: 2
+  shootspeed: 3
   side: 3
   theList: []
   fromObject: {fileID: 0}

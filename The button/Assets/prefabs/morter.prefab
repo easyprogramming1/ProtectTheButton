@@ -290,7 +290,7 @@ MonoBehaviour:
   enenmytargeting: 0
   shootpoint: {fileID: 0}
   rotationer: {x: 0, y: 0, z: 0}
-  shootspeed: 3
+  shootspeed: 4
   aim: {fileID: 2892857760481420150}
 --- !u!58 &1113070756819146876
 CircleCollider2D:
