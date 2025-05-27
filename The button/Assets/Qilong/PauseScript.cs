@@ -35,7 +35,7 @@ public class PauseScript : MonoBehaviour
         Time.timeScale = 0;
         Debug.Log("Leo");
         Pausthings.SetActive(true);
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.00000000000000000000001f);
         PausthingsTrue = true;
 
     }
