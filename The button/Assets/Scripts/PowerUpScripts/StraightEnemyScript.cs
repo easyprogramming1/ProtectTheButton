@@ -6,6 +6,7 @@ public class StraightEnemyScript : MonoBehaviour
 {
     public Transform button;
     public float speed;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +28,7 @@ public class StraightEnemyScript : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
                 Destroy(gameObject);
+
             }
         }
     }
