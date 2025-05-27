@@ -53,7 +53,7 @@ public class theButtonScript : MonoBehaviour
     {
         if (turretart.GetComponent<turretartscript>().nottuching)
         {
-            Instantiate(turretGa, placepoint, Quaternion.identity);
+            Instantiate(turretGa, turretart.GetComponent<turretartscript>().potpoint, Quaternion.identity);
             holdingturret = false;
         }
     }

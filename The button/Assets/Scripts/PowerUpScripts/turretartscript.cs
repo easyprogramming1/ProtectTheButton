@@ -3,6 +3,7 @@ using UnityEngine;
 public class turretartscript : MonoBehaviour
 {
     public bool nottuching;
+    public Vector2 potpoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +20,9 @@ public class turretartscript : MonoBehaviour
         Debug.Log("tuch");
         if(collision.name == "pot(Clone)")
         {
+            potpoint = collision.transform.position;
             nottuching = true;
+            collision.name = "donepot";
             Debug.Log("bruh");
         }
         
