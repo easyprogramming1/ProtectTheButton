@@ -22,7 +22,7 @@ public class theButtonScript : MonoBehaviour
     public Transform potart;
     public Transform morterart;
     public Transform turretart;
-
+    public bool emtyPot;
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -35,8 +35,11 @@ public class theButtonScript : MonoBehaviour
                 StartCoroutine(DoSomething());
             }
         }
-        potholding();
-        turretholding();
+        emtyPot = false;
+    }
+    public void IEXIST()
+    {
+        emtyPot = true;
     }
     public void AddCoin()
     {

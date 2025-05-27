@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4466083527690579618}
   - component: {fileID: 4111423917803963043}
   - component: {fileID: -3859628302936922383}
+  - component: {fileID: 2053197518898865963}
   m_Layer: 7
   m_Name: pot
   m_TagString: Untagged
@@ -152,3 +153,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &2053197518898865963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656067506491819055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2d3630a7d9f564baf0bfd4612838c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
