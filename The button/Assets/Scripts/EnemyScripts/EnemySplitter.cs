@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SplittingEnemy1 : MonoBehaviour
 {
-    [SerializeField] GameObject _splittingPart;
+    public GameObject _splittingPart;
     private Rigidbody2D enemyRb;
     [SerializeField] float _moveSpeed;
     [SerializeField] float _angleAdder;
@@ -17,6 +17,7 @@ public class SplittingEnemy1 : MonoBehaviour
     {
         enemyRb = GetComponent<Rigidbody2D>();
         bigEnemy = transform.Find("BigEnemy").gameObject;
+
     }
 
     
@@ -57,5 +58,10 @@ public class SplittingEnemy1 : MonoBehaviour
         angleAdder = 0f;
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+    }
+
+    public void SetSplittingPart(GameObject partPrefab)
+    {
+        _splittingPart = partPrefab;
     }
 }
