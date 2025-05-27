@@ -338,8 +338,20 @@ MonoBehaviour:
   plott3: {fileID: 517385845}
   plott4: {fileID: 1809003232}
   coins: 0
-  holdingTurret: 0
-  holdingMorter: 0
+  holdingPot: 0
+  holdingturret: 0
+  holdingmorter: 0
+  placepoint: {x: 0, y: 0}
+  turretGa: {fileID: 0}
+  morterGa: {fileID: 0}
+  pot: {fileID: 0}
+  potart: {fileID: 0}
+  morterart: {fileID: 0}
+  turretart: {fileID: 0}
+  potBuy: 0
+  morterBuy: 0
+  turretBuy: 0
+  emtyPot: 0
 --- !u!212 &186117036
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -689,6 +701,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+--- !u!1 &845210153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 845210155}
+  - component: {fileID: 845210154}
+  m_Layer: 0
+  m_Name: CursorController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &845210154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845210153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bfd101024f6b884d9df14c85aa80f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTextureDefault: {fileID: 2800000, guid: 74dd6f66dec727c4bbdb46fd4e7d9237, type: 3}
+  clickPosition: {x: 0, y: 0}
+--- !u!4 &845210155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845210153}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.61747, y: 4.33971, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1019609562
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,3 +1324,4 @@ SceneRoots:
   - {fileID: 798913495}
   - {fileID: 1732263500}
   - {fileID: 1742135291}
+  - {fileID: 845210155}
