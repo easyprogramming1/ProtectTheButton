@@ -39,4 +39,10 @@ public class enemyspawner : MonoBehaviour
         Instantiate(straightenenmy, new Vector2(ranx * minusornot1, rany * minusornot2), Quaternion.identity);
         StartCoroutine(spawn());
     }
+
+    public IEnumerator spawnSpinningEnemy()
+    {
+        yield return new WaitForSeconds(spawnspeed);
+
+    }
 }
