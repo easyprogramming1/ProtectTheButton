@@ -4,18 +4,14 @@ public class CoinScreept : MonoBehaviour
 {
     public int Coin;
 
-
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+   
+    void AddCoin()
     {
-        
+        Coin += 100;
     }
 
-    // Update is called once per frame
-    void Update()
+    void AddCoinSmale()
     {
-        
+        Coin += 50;
     }
 }

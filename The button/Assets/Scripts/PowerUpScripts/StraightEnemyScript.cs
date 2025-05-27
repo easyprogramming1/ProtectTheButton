@@ -11,6 +11,7 @@ public class StraightEnemyScript : MonoBehaviour
     void Start()
     {
         button = GameObject.Find("The Button").transform;
+
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class StraightEnemyScript : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
                 Destroy(gameObject);
+                BroadcastMessage("AddCoin");
 
             }
         }
