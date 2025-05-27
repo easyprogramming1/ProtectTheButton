@@ -75,10 +75,16 @@ public class StraightEnemyScript : MonoBehaviour
             button.BroadcastMessage("AddCoin");
             Destroy(gameObject);
         }
-        if(collision.transform.tag == "Button")
+        if (collision.transform.tag == "lazer")
+        {
+            button.BroadcastMessage("AddCoin");
+            Destroy(gameObject);
+        }
+        if (collision.transform.tag == "Button")
         {
             Destroy(gameObject);
         }
+
     }
 
 }

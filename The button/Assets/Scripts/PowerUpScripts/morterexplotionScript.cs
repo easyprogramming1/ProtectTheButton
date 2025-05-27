@@ -23,7 +23,6 @@ public class morterexplotionScript : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
-            Debug.Log("kill");
             Destroy(collision.gameObject);
         }
     }

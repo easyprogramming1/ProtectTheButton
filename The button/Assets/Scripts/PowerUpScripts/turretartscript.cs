@@ -4,10 +4,11 @@ public class turretartscript : MonoBehaviour
 {
     public bool nottuching;
     public Vector2 potpoint;
+    GameObject button;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        button = GameObject.Find("The Button");
     }
 
     // Update is called once per frame
@@ -20,11 +21,8 @@ public class turretartscript : MonoBehaviour
         if(collision.name == "pot(Clone)")
         {
             nottuching = true;
-            if (Input.GetMouseButtonDown(0))
-            {
-                potpoint = collision.transform.position;
-                collision.name = "donepot";
-            }
+            potpoint = collision.transform.position;
+            button.GetComponent<theButtonScript>().theplotes = collision.gameObject;
         }
         
     }
