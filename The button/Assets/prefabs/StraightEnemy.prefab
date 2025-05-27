@@ -104,8 +104,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 0}
   speed: 1.3
+  ogspeed: 0
   bigenemy: 0
   hp: 1
+  speedchanger: 0
+  splosh: {fileID: 2741659039078523016, guid: 608accf3c5fe3d94799c2d9800e29fbe, type: 3}
 --- !u!61 &7145391598885357269
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class StraightEnemyScript : MonoBehaviour
     public float hp;
     Rigidbody2D eig;
     public float speedchanger;
+    public GameObject splosh;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +59,7 @@ public class StraightEnemyScript : MonoBehaviour
         }
         if(hp <= 0)
         {
+            Instantiate(splosh,transform.position, Quaternion.identity);
             if (bigenemy)
             {
                 button.BroadcastMessage("AddCoinBig");
