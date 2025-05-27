@@ -1,6 +1,7 @@
 using System.Collections;
-using UnityEngine;
 using System.Collections.Generic;
+using NUnit.Framework;
+using UnityEngine;
 
 public class turret : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class turret : MonoBehaviour
     public Transform shootpoint;
     public Vector3 rotationer;
     public float shootspeed;
+    public float side;
+    public List<GameObject> theList;
 
 
     public Transform fromObject;
@@ -28,10 +31,10 @@ public class turret : MonoBehaviour
         rotationer.x = transform.rotation.eulerAngles.x;
         rotationer.y = transform.rotation.eulerAngles.y;
         rotationer.z = transform.rotation.eulerAngles.z - 90;
-        GameObject closestEnemy = GetClosestEnemy();
-        if (closestEnemy != null)
+        GameObject closest = GetClosestEnemy();
+        if (closest != null)
         {
-            enemyPos = closestEnemy.transform.position;
+            enemyPos = closest.transform.position;
             enenmytargeting = true;
         }
         else
@@ -50,7 +53,7 @@ public class turret : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
 
 
-        Vector2 direction = closestEnemy.transform.position - transform.position;
+        Vector2 direction = closest.transform.position - transform.position;
         float distance = direction.magnitude;
 
        
@@ -77,7 +80,6 @@ public class turret : MonoBehaviour
             if (obj.name == "1e")
             {
                 e1.Add(obj);
-                Debug.Log("e1"+e1);
             }
         }
         foreach (GameObject obj in allObjects)
@@ -85,7 +87,6 @@ public class turret : MonoBehaviour
             if (obj.name == "2e")
             {
                 e2.Add(obj);
-                Debug.Log("e2" + e2);
             }
         }
         foreach (GameObject obj in allObjects)
@@ -93,7 +94,6 @@ public class turret : MonoBehaviour
             if (obj.name == "3e")
             {
                 e3.Add(obj);
-                Debug.Log("e3" + e3);
             }
         }
         foreach (GameObject obj in allObjects)
@@ -101,15 +101,34 @@ public class turret : MonoBehaviour
             if (obj.name == "4e")
             {
                 e4.Add(obj);
-                Debug.Log("e4" + e4);
             }
+        }
+        if(side == 1)
+        {
+            e3.AddRange(e4);
+            theList = e3;
+        }
+        if (side == 2)
+        {
+            e4.AddRange(e1);
+            theList = e4;
+        }
+        if (side == 3)
+        {
+            e1.AddRange(e2);
+            theList = e1;
+        }
+        if (side == 4)
+        {
+            e3.AddRange(e2);
+            theList = e3;
         }
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         GameObject closest = null;
         float minDistance = Mathf.Infinity;
         Vector3 myPosition = transform.position;
 
-        foreach (GameObject enemy in enemies)
+        foreach (GameObject enemy in theList)
         {
             float distance = Vector3.Distance(enemy.transform.position, myPosition);
             if (distance < minDistance)
