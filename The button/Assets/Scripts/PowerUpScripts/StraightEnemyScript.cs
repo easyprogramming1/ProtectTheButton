@@ -33,7 +33,33 @@ public class StraightEnemyScript : MonoBehaviour
 
             }
         }
+        GameObject closestEnemy = VoidClosestEnemy();
+        if (closestEnemy != null)
+        {
+            transform.name = closestEnemy.transform.name + "e";
+        }
+       
     }
+    GameObject VoidClosestEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("point");
+        GameObject closest = null;
+        float minDistance = Mathf.Infinity;
+        Vector3 myPosition = transform.position;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(enemy.transform.position, myPosition);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closest = enemy;
+            }
+        }
+
+        return closest;
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "bullet")
