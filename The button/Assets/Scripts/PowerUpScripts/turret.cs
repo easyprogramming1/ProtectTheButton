@@ -68,12 +68,40 @@ public class turret : MonoBehaviour
     GameObject GetClosestEnemy()
     {
         GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
-        List<GameObject> matchingObjects = new List<GameObject>();
+        List<GameObject> e1 = new List<GameObject>();
+        List<GameObject> e2 = new List<GameObject>();
+        List<GameObject> e3 = new List<GameObject>();
+        List<GameObject> e4 = new List<GameObject>();
         foreach (GameObject obj in allObjects)
         {
             if (obj.name == "1e")
             {
-                matchingObjects.Add(obj);
+                e1.Add(obj);
+                Debug.Log("e1"+e1);
+            }
+        }
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name == "2e")
+            {
+                e2.Add(obj);
+                Debug.Log("e2" + e2);
+            }
+        }
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name == "3e")
+            {
+                e3.Add(obj);
+                Debug.Log("e3" + e3);
+            }
+        }
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj.name == "4e")
+            {
+                e4.Add(obj);
+                Debug.Log("e4" + e4);
             }
         }
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
