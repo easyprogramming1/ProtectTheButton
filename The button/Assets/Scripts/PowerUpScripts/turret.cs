@@ -25,6 +25,46 @@ public class turret : MonoBehaviour
     {
         StartCoroutine(shoot());
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+
+        GameObject closestEnemy = VoidClosestEnemy();
+        if (closestEnemy != null)
+        {
+            if(closestEnemy.name == "plott 1")
+            {
+                side = 1;
+            }
+            if (closestEnemy.name == "plott 2")
+            {
+                side = 2;
+            }
+            if (closestEnemy.name == "plott 3")
+            {
+                side = 3;
+            }
+            if (closestEnemy.name == "plott 4")
+            {
+                side = 4;
+            }
+        }
+    }
+    GameObject VoidClosestEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Bplott");
+        GameObject closest = null;
+        float minDistance = Mathf.Infinity;
+        Vector3 myPosition = transform.position;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(enemy.transform.position, myPosition);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closest = enemy;
+            }
+        }
+
+        return closest;
     }
     void Update()
     {

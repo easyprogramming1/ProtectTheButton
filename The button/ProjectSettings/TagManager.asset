@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Button
   - bullet
+  - point
+  - Bplott
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - Water
   - UI
   - bullet
-  - 
-  - 
-  - 
-  - 
+  - pot
+  - enemy
+  - turret
+  - Bplott
   - 
   - 
   - 
