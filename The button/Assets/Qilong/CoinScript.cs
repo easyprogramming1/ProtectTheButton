@@ -4,14 +4,15 @@ public class CoinScreept : MonoBehaviour
 {
     public int Coin;
 
-   
-    void AddCoin()
+
+    public void AddCoin()
     {
         Coin += 100;
     }
 
-    void AddCoinSmale()
+    public void AddCoinSamle()
     {
         Coin += 50;
     }
+
 }
