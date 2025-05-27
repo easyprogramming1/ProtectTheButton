@@ -68,7 +68,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void potholding()
     {
-        if (Input.GetKeyDown(KeyCode.P) && !holdingPot && coins >= 50)
+        if (!holdingPot && coins >= 50)
         {
             holdingPot = true;
             coins -= 50;
@@ -91,7 +91,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void turretholding()
     {
-        if (Input.GetKeyDown(KeyCode.T) && !holdingturret && coins >= 100)
+        if (!holdingturret && coins >= 100)
         {
             holdingturret = true;
             coins -= 100;
