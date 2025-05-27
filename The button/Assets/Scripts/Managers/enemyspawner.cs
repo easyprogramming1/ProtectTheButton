@@ -4,17 +4,21 @@ using UnityEngine;
 public class enemyspawner : MonoBehaviour
 {
     public GameObject straightenenmy;
-    public GameObject spinenenmy;
+    public GameObject bigenenmy;
     public float spawndistance;
     float ranx;
     float rany;
     float minusornot1;
     float minusornot2;
     public float spawnspeed;
+    public float enemyspawnspeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        StartCoroutine(spawnspeedchanger());
         StartCoroutine(spawn());
+        StartCoroutine(spawnBig());
     }
 
     // Update is called once per frame
@@ -39,7 +43,18 @@ public class enemyspawner : MonoBehaviour
         Instantiate(straightenenmy, new Vector2(ranx * minusornot1, rany * minusornot2), Quaternion.identity);
         StartCoroutine(spawn());
     }
-
+    public IEnumerator spawnBig()
+    {
+        yield return new WaitForSeconds(spawnspeed*30);
+        Instantiate(bigenenmy, new Vector2(ranx * minusornot1, rany * minusornot2), Quaternion.identity);
+        StartCoroutine(spawnBig());
+    }
+    public IEnumerator spawnspeedchanger()
+    {
+        yield return new WaitForSeconds(1);
+        spawnspeed *= enemyspawnspeed;
+        StartCoroutine(spawnspeedchanger());
+    }
     public IEnumerator spawnSpinningEnemy()
     {
         yield return new WaitForSeconds(spawnspeed);

@@ -79,6 +79,10 @@ public class theButtonScript : MonoBehaviour
     }
     public void AddCoin()
     {
+        coins += 5;
+    }
+    public void AddCoinBig()
+    {
         coins += 10;
     }
     public void placeingPot()

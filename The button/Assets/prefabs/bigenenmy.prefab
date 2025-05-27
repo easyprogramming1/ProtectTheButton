@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7145391598885357269}
   - component: {fileID: 6791633506555969770}
   m_Layer: 8
-  m_Name: StraightEnemy
+  m_Name: bigenenmy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 7096904882412730819}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.86, y: -4.2987, z: 0}
-  m_LocalScale: {x: 0.1452456, y: 0.1452456, z: 0.1055732}
+  m_LocalPosition: {x: 7.86, y: -4.3054, z: 0}
+  m_LocalScale: {x: 0.29930758, y: 0.29930758, z: 0.21755469}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2635162760147451602, guid: 155b53d42e8ee4049b8022937e783fa2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,9 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 0}
-  speed: 1.3
+  speed: 0.6
   bigenemy: 0
-  hp: 1
+  hp: 3
 --- !u!61 &7145391598885357269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,4 +178,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7

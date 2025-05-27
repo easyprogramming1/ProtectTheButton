@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class morterScript : MonoBehaviour
 {
+    public Animator ani;
     public Vector2 enemyPos;
     public string enemyTag = "Enemy";
     public Camera mainCam;
@@ -16,8 +17,10 @@ public class morterScript : MonoBehaviour
 
     public void Start()
     {
+        ani = GetComponent<Animator>();
         StartCoroutine(shoot());
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        StartCoroutine(anima());
     }
     void Update()
     {
@@ -41,8 +44,16 @@ public class morterScript : MonoBehaviour
         if (enenmytargeting)
         {
             Instantiate(explotion, enemyPos, Quaternion.Euler(rotationer));
+            ani.SetBool("shootinge", true);
         }
         StartCoroutine(shoot());
+    }
+    public IEnumerator anima()
+    {
+        yield return new WaitForSeconds(0.2f);
+            ani.SetBool("shootinge", false);
+        
+        StartCoroutine(anima());
     }
 
     GameObject GetClosestEnemy()
