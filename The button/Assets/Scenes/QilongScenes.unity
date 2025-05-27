@@ -419,6 +419,26 @@ PrefabInstance:
       propertyPath: theButtonScript
       value: 
       objectReference: {fileID: 15944422}
+    - target: {fileID: 787702403942007508, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 787702403942007508, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1966689741}
+    - target: {fileID: 787702403942007508, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: potholding
+      objectReference: {fileID: 0}
+    - target: {fileID: 787702403942007508, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: theButtonScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 787702403942007508, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1113770006746892653, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
       propertyPath: theButtonScript
       value: 
@@ -518,8 +538,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6988998843760193912, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1966689741}
   m_SourcePrefab: {fileID: 100100000, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+--- !u!1 &1966689739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6988998843760193912, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+  m_PrefabInstance: {fileID: 1355474221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1966689741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966689739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5be7c0d8251d8468dd8a416243abc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: 0
+  plott1: {fileID: 0}
+  plott2: {fileID: 0}
+  plott3: {fileID: 0}
+  plott4: {fileID: 0}
+  coins: 0
+  holdingPot: 0
+  holdingturret: 0
+  holdingmorter: 0
+  placepoint: {x: 0, y: 0}
+  turretGa: {fileID: 0}
+  morterGa: {fileID: 0}
+  pot: {fileID: 0}
+  potart: {fileID: 0}
+  morterart: {fileID: 0}
+  turretart: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
