@@ -19,9 +19,12 @@ public class turretartscript : MonoBehaviour
     {
         if(collision.name == "pot(Clone)")
         {
-            potpoint = collision.transform.position;
             nottuching = true;
-            collision.name = "donepot";
+            if (Input.GetMouseButtonDown(0))
+            {
+                potpoint = collision.transform.position;
+                collision.name = "donepot";
+            }
         }
         
     }

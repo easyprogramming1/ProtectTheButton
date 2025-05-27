@@ -22,6 +22,9 @@ public class theButtonScript : MonoBehaviour
     public Transform potart;
     public Transform morterart;
     public Transform turretart;
+    public bool potBuy;
+    public bool morterBuy;
+    public bool turretBuy;
     public bool emtyPot;
     void Update()
     {
@@ -43,6 +46,21 @@ public class theButtonScript : MonoBehaviour
         morterholding();
         
         emtyPot = false;
+        morterBuy = false;
+        turretBuy = false;
+        potBuy = false;
+    }
+    public void buyPot()
+    {
+        potBuy = true;
+    }
+    public void buyMorter()
+    {
+        morterBuy = true;
+    }
+    public void buyturret()
+    {
+        turretBuy = true;
     }
     public void IEXIST()
     {
@@ -70,7 +88,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void placingMorter()
     {
-        if (turretart.GetComponent<turretartscript>().nottuching)
+        if (morterart.GetComponent<turretartscript>().nottuching)
         {
             Instantiate(morterGa, morterart.GetComponent<turretartscript>().potpoint, Quaternion.identity);
             holdingmorter = false;
@@ -87,7 +105,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void potholding()
     {
-        if (!holdingPot && coins >= 50 && Input.GetKeyDown(KeyCode.P))
+        if (!holdingPot && coins >= 50 && potBuy))
         {
             holdingPot = true;
             coins -= 50;
@@ -110,7 +128,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void turretholding()
     {
-        if (!holdingturret && coins >= 100 && Input.GetKeyDown(KeyCode.T) && emtyPot == true)
+        if (!holdingturret && coins >= 100 && turretBuy && emtyPot == true)
         {
             holdingturret = true;
             coins -= 100;
@@ -133,7 +151,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void morterholding()
     {
-        if (!holdingmorter && coins >= 150 && Input.GetKeyDown(KeyCode.M) && emtyPot == true)
+        if (!holdingmorter && coins >= 150 && morterBuy && emtyPot == true)
         {
             holdingmorter = true;
             coins -= 150;
@@ -142,7 +160,7 @@ public class theButtonScript : MonoBehaviour
         {
             Vector2 mous = Input.mousePosition;
             placepoint = Camera.main.ScreenToWorldPoint(mous);
-            placingTurret();
+            placingMorter();
         }
         if (holdingmorter)
         {
