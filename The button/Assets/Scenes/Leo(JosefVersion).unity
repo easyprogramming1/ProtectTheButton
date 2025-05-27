@@ -341,17 +341,22 @@ MonoBehaviour:
   holdingPot: 0
   holdingturret: 0
   holdingmorter: 0
+  holdinglazar: 0
   placepoint: {x: 0, y: 0}
   turretGa: {fileID: 0}
   morterGa: {fileID: 0}
+  lazarGa: {fileID: 0}
   pot: {fileID: 0}
   potart: {fileID: 0}
   morterart: {fileID: 0}
   turretart: {fileID: 0}
+  lazarart: {fileID: 0}
   potBuy: 0
   morterBuy: 0
   turretBuy: 0
   emtyPot: 0
+  lazarBuy: 0
+  theplotes: {fileID: 0}
 --- !u!212 &186117036
 SpriteRenderer:
   m_ObjectHideFlags: 0
