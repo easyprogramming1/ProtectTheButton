@@ -3,7 +3,6 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using TMPro;
 
 public class theButtonScript : MonoBehaviour
 {
@@ -16,19 +15,22 @@ public class theButtonScript : MonoBehaviour
     public bool holdingPot;
     public bool holdingturret;
     public bool holdingmorter;
+    public bool holdinglazar;
     public Vector2 placepoint;
     public GameObject turretGa;
     public GameObject morterGa;
+    public GameObject lazarGa;
     public GameObject pot;
     public Transform potart;
     public Transform morterart;
     public Transform turretart;
+    public Transform lazarart;
     public bool potBuy;
     public bool morterBuy;
     public bool turretBuy;
     public bool emtyPot;
-
-    public TMP_Text TotalCoin;
+    public bool lazarBuy;
+    public GameObject theplotes;
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -47,17 +49,21 @@ public class theButtonScript : MonoBehaviour
         
             potholding();
         morterholding();
+        lazarholding();
         
         emtyPot = false;
         morterBuy = false;
         turretBuy = false;
         potBuy = false;
-
-        TotalCoin.text = "Total Coins: " + coins.ToString();
+        lazarBuy = false;
     }
     public void buyPot()
     {
         potBuy = true;
+    }
+    public void buyLazar()
+    {
+        lazarBuy = true;
     }
     public void buyMorter()
     {
@@ -89,6 +95,7 @@ public class theButtonScript : MonoBehaviour
         {
             Instantiate(turretGa, turretart.GetComponent<turretartscript>().potpoint, Quaternion.identity);
             holdingturret = false;
+            theplotes.name = "donepot";
         }
     }
     public void placingMorter()
@@ -97,6 +104,16 @@ public class theButtonScript : MonoBehaviour
         {
             Instantiate(morterGa, morterart.GetComponent<turretartscript>().potpoint, Quaternion.identity);
             holdingmorter = false;
+            theplotes.name = "donepot";
+        }
+    }
+    public void placinglazar()
+    {
+        if (lazarart.GetComponent<turretartscript>().nottuching)
+        {
+            Instantiate(lazarGa, lazarart.GetComponent<turretartscript>().potpoint, Quaternion.identity);
+            holdinglazar = false;
+            theplotes.name = "donepot";
         }
     }
 
@@ -175,6 +192,29 @@ public class theButtonScript : MonoBehaviour
         else
         {
             morterart.transform.position = new Vector3(10000, 0, 0);
+        }
+    }
+    public void lazarholding()
+    {
+        if (!holdinglazar && coins >= 150 && lazarBuy && emtyPot == true)
+        {
+            holdinglazar = true;
+            coins -= 150;
+        }
+        if (holdinglazar && Input.GetMouseButtonDown(0))
+        {
+            Vector2 mous = Input.mousePosition;
+            placepoint = Camera.main.ScreenToWorldPoint(mous);
+            placinglazar();
+        }
+        if (holdinglazar)
+        {
+            Vector3 mus = Input.mousePosition;
+            lazarart.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(mus).x, Camera.main.ScreenToWorldPoint(mus).y, 0);
+        }
+        else
+        {
+            lazarart.transform.position = new Vector3(10000, 0, 0);
         }
     }
 }
