@@ -17,19 +17,16 @@ public class turretartscript : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("tuch");
         if(collision.name == "pot(Clone)")
         {
             potpoint = collision.transform.position;
             nottuching = true;
             collision.name = "donepot";
-            Debug.Log("bruh");
         }
         
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         nottuching = false;
-        Debug.Log("exit");
     }
 }

@@ -35,6 +35,13 @@ public class theButtonScript : MonoBehaviour
                 StartCoroutine(DoSomething());
             }
         }
+        
+            turretholding();
+        
+        
+            potholding();
+        morterholding();
+        
         emtyPot = false;
     }
     public void IEXIST()
@@ -61,6 +68,14 @@ public class theButtonScript : MonoBehaviour
             holdingturret = false;
         }
     }
+    public void placingMorter()
+    {
+        if (turretart.GetComponent<turretartscript>().nottuching)
+        {
+            Instantiate(morterGa, morterart.GetComponent<turretartscript>().potpoint, Quaternion.identity);
+            holdingmorter = false;
+        }
+    }
 
     public IEnumerator DoSomething()
     {
@@ -72,7 +87,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void potholding()
     {
-        if (!holdingPot && coins >= 50)
+        if (!holdingPot && coins >= 50 && Input.GetKeyDown(KeyCode.P))
         {
             holdingPot = true;
             coins -= 50;
@@ -95,7 +110,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void turretholding()
     {
-        if (!holdingturret && coins >= 100)
+        if (!holdingturret && coins >= 100 && Input.GetKeyDown(KeyCode.T) && emtyPot == true)
         {
             holdingturret = true;
             coins -= 100;
@@ -114,6 +129,29 @@ public class theButtonScript : MonoBehaviour
         else
         {
             turretart.transform.position = new Vector3(10000, 0, 0);
+        }
+    }
+    public void morterholding()
+    {
+        if (!holdingmorter && coins >= 150 && Input.GetKeyDown(KeyCode.M) && emtyPot == true)
+        {
+            holdingmorter = true;
+            coins -= 150;
+        }
+        if (holdingmorter && Input.GetMouseButtonDown(0))
+        {
+            Vector2 mous = Input.mousePosition;
+            placepoint = Camera.main.ScreenToWorldPoint(mous);
+            placingTurret();
+        }
+        if (holdingmorter)
+        {
+            Vector3 mus = Input.mousePosition;
+            morterart.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(mus).x, Camera.main.ScreenToWorldPoint(mus).y, 0);
+        }
+        else
+        {
+            morterart.transform.position = new Vector3(10000, 0, 0);
         }
     }
 }
