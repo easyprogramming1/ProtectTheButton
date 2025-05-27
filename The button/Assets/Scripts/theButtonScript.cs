@@ -105,7 +105,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void potholding()
     {
-        if (!holdingPot && coins >= 50 && potBuy))
+        if (!holdingPot && coins >= 50 && potBuy)
         {
             holdingPot = true;
             coins -= 50;
