@@ -15,6 +15,6 @@ public class coins : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinss.text = "Amount of coins: " + button.GetComponent<theButtonScript>().coins.ToString();
+        coinss.text = button.GetComponent<theButtonScript>().coins.ToString();
     }
 }
