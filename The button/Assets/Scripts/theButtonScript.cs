@@ -32,6 +32,13 @@ public class theButtonScript : MonoBehaviour
     public bool emtyPot;
     public bool lazarBuy;
     public GameObject theplotes;
+    public AudioSource buys;
+    public Transform enemyspawner;
+    private void Start()
+    {
+        buys = enemyspawner.GetComponent<AudioSource>();
+        StartCoroutine(bruh());
+    }
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -58,21 +65,31 @@ public class theButtonScript : MonoBehaviour
         potBuy = false;
         lazarBuy = false;
     }
+    public IEnumerator bruh()
+    {
+        buys.mute = true;
+        yield return new WaitForSeconds(1);
+        buys.mute = false;
+    }
     public void buyPot()
     {
         potBuy = true;
+        buys.Play();
     }
     public void buyLazar()
     {
         lazarBuy = true;
+        buys.Play();
     }
     public void buyMorter()
     {
         morterBuy = true;
+        buys.Play();
     }
     public void buyturret()
     {
         turretBuy = true;
+        buys.Play();
     }
     public void IEXIST()
     {
