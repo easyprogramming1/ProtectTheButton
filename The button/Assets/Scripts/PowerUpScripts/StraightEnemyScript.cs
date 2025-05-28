@@ -20,7 +20,7 @@ public class StraightEnemyScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        hp = maxhp * GameObject.Find("enemy spawner").GetComponent<enemyspawner>().enenmyHP;
+        hp = maxhp;
         button = GameObject.Find("The Button").transform;
         eig = GetComponent<Rigidbody2D>();
         ogspeed = speed;
@@ -43,6 +43,7 @@ public class StraightEnemyScript : MonoBehaviour
     
     public void Update()
     {
+        Debug.Log("hej");
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
@@ -51,7 +52,7 @@ public class StraightEnemyScript : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
                 hp -= 1;
-
+                Debug.Log("jjj");
             }
         }
         GameObject closestEnemy = VoidClosestEnemy();
