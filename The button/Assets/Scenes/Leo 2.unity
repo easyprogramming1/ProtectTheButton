@@ -223,17 +223,23 @@ MonoBehaviour:
   holdingPot: 0
   holdingturret: 0
   holdingmorter: 0
+  holdinglazar: 0
   placepoint: {x: 0, y: 0}
   turretGa: {fileID: 6693973940885712277, guid: e53ab9b9d349a9d4b993677b39afe5c3, type: 3}
   morterGa: {fileID: 3002192050736927358, guid: ac73c3265a2c7c74ba96e69afdae091a, type: 3}
+  lazarGa: {fileID: 0}
   pot: {fileID: 1656067506491819055, guid: a5c15cfee00d75e4084f2a3f03567fdd, type: 3}
   potart: {fileID: 12374924246473409}
   morterart: {fileID: 4054594101779087726}
   turretart: {fileID: 6203686594266812144}
+  lazarart: {fileID: 0}
   potBuy: 0
   morterBuy: 0
   turretBuy: 0
   emtyPot: 0
+  lazarBuy: 0
+  theplotes: {fileID: 0}
+  TotalCoin: {fileID: 721999542}
 --- !u!212 &186117036
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -767,7 +773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
