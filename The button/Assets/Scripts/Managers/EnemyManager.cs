@@ -35,7 +35,7 @@ public class EnemyManager : MonoBehaviour
 
         if (position.x > 0)
         {
-            rotation = Quaternion.Euler(0f, 0f, 180f);
+            rotation = Quaternion.Euler(0f, 180f, 0);
         }
 
         GameObject enemy = Instantiate(_spliEnemy, position, rotation);
