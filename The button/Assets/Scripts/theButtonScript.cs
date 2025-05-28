@@ -36,6 +36,10 @@ public class theButtonScript : MonoBehaviour
     public AudioSource buys;
     public Transform enemyspawner;
     public AudioSource deads;
+    public GameObject erea1;
+    public GameObject erea2;
+    public GameObject erea3;
+    public GameObject erea4;
     private void Start()
     {
         deads = GetComponent<AudioSource>();
@@ -67,6 +71,68 @@ public class theButtonScript : MonoBehaviour
         turretBuy = false;
         potBuy = false;
         lazarBuy = false;
+        if (holdingPot||holdingturret||holdinglazar) 
+        {
+            GameObject closestEnemy = VoidClosestEnemy();
+            if (closestEnemy != null)
+            {
+                if (closestEnemy.name == "plott 1")
+                {
+                    erea1.SetActive(true);
+                    erea2.SetActive(false);
+                    erea3.SetActive(false);
+                    erea4.SetActive(false);
+                }
+                if (closestEnemy.name == "plott 2")
+                {
+                    erea2.SetActive(true);
+                    erea1.SetActive(false);
+                    erea3.SetActive(false);
+                    erea4.SetActive(false);
+                }
+                if (closestEnemy.name == "plott 3")
+                {
+                    erea4.SetActive(true);
+                    erea2.SetActive(false);
+                    erea1.SetActive(false);
+                    erea4.SetActive(false);
+                }
+                if (closestEnemy.name == "plott 4")
+                {
+                    erea4.SetActive(true);
+                    erea2.SetActive(false);
+                    erea3.SetActive(false);
+                    erea1.SetActive(false);
+                }
+            }
+        }
+        else
+        {
+            erea1.SetActive(false);
+            erea2.SetActive(false);
+            erea3.SetActive(false);
+            erea4.SetActive(false);
+        }
+    }
+    GameObject VoidClosestEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Bplott");
+        GameObject closest = null;
+        float minDistance = Mathf.Infinity;
+        Vector3 mos = Input.mousePosition;
+        Vector3 myPosition = Camera.main.ScreenToWorldPoint(mos);
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(enemy.transform.position, myPosition);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closest = enemy;
+            }
+        }
+
+        return closest;
     }
     public IEnumerator bruh()
     {
