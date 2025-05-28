@@ -386,6 +386,7 @@ MonoBehaviour:
   theplotes: {fileID: 0}
   buys: {fileID: 0}
   enemyspawner: {fileID: 1456618164}
+  deads: {fileID: 0}
 --- !u!212 &186117036
 SpriteRenderer:
   m_ObjectHideFlags: 0
