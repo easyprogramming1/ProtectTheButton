@@ -33,6 +33,7 @@ public class PauseScript : MonoBehaviour
     public IEnumerator OpenToClose()
     {
         Time.timeScale = 0;
+
         Debug.Log("Leo");
         Pausthings.SetActive(true);
         yield return new WaitForSecondsRealtime(0.00000000000000000000001f);
