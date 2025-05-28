@@ -3,7 +3,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using TMPro;
+using UnityEngine.SceneManagement;
 
 public class theButtonScript : MonoBehaviour
 {
@@ -32,8 +32,6 @@ public class theButtonScript : MonoBehaviour
     public bool emtyPot;
     public bool lazarBuy;
     public GameObject theplotes;
-
-    public TMP_Text TotalCoin;
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -59,8 +57,6 @@ public class theButtonScript : MonoBehaviour
         turretBuy = false;
         potBuy = false;
         lazarBuy = false;
-
-        TotalCoin.text = "TotalCoin: " + coins.ToString();
     }
     public void buyPot()
     {
@@ -83,6 +79,10 @@ public class theButtonScript : MonoBehaviour
         emtyPot = true;
     }
     public void AddCoin()
+    {
+        coins += 5;
+    }
+    public void AddCoinBig()
     {
         coins += 10;
     }
@@ -129,6 +129,8 @@ public class theButtonScript : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         click = false;
         GetComponent<SpriteRenderer>().color = Color.white;
+        SceneManager.LoadScene("GameOverScene");
+
     }
     public void potholding()
     {
@@ -221,5 +223,9 @@ public class theButtonScript : MonoBehaviour
         {
             lazarart.transform.position = new Vector3(10000, 0, 0);
         }
+    }
+    public void dead()
+    {
+        StartCoroutine(DoSomething());
     }
 }

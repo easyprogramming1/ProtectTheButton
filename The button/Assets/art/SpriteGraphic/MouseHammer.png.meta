@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 64218d9b67ff7fe4c8314b77ff0467ce
+guid: 74dd6f66dec727c4bbdb46fd4e7d9237
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1247479312372960071
-    second: Untitled366_20250527143019_0
-  - first:
-      213: -5684430850488458748
-    second: Untitled366_20250527143019_1
-  - first:
-      213: 6961026874961348149
-    second: Untitled366_20250527143019_2
+      213: -6266670452958427680
+    second: MouseHammer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -30,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,13 +51,13 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -78,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled366_20250527143019_0
+      name: MouseHammer_0
       rect:
         serializedVersion: 2
-        x: 505
-        y: 675
-        width: 816
-        height: 216
+        x: 1224
+        y: 859
+        width: 760
+        height: 1201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b47c51cc2010bee0800000000000000
-      internalID: -1247479312372960071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled366_20250527143019_1
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 507
-        width: 547
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4022d564248dc11b0800000000000000
-      internalID: -5684430850488458748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled366_20250527143019_2
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 345
-        width: 547
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 536c40acf098a9060800000000000000
-      internalID: 6961026874961348149
+      spriteID: 0e50afedc605809a0800000000000000
+      internalID: -6266670452958427680
       vertices: []
       indices: 
       edges: []
@@ -197,10 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Untitled366_20250527143019_0: -1247479312372960071
-      Untitled366_20250527143019_1: -5684430850488458748
-      Untitled366_20250527143019_2: 6961026874961348149
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

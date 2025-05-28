@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64aeced2e1cd99b45a370f84218a9e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToChange: MainMenu
+  SceneToChange: Leo
 --- !u!1 &964593615
 GameObject:
   m_ObjectHideFlags: 0

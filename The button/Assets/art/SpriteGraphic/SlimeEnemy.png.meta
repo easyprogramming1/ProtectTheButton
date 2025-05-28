@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 64218d9b67ff7fe4c8314b77ff0467ce
+guid: 155b53d42e8ee4049b8022937e783fa2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1247479312372960071
-    second: Untitled366_20250527143019_0
-  - first:
-      213: -5684430850488458748
-    second: Untitled366_20250527143019_1
-  - first:
-      213: 6961026874961348149
-    second: Untitled366_20250527143019_2
+      213: 2635162760147451602
+    second: SlimeEnemy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled366_20250527143019_0
+      name: SlimeEnemy_0
       rect:
         serializedVersion: 2
-        x: 505
-        y: 675
-        width: 816
-        height: 216
+        x: 584
+        y: 711
+        width: 917
+        height: 628
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b47c51cc2010bee0800000000000000
-      internalID: -1247479312372960071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled366_20250527143019_1
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 507
-        width: 547
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4022d564248dc11b0800000000000000
-      internalID: -5684430850488458748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled366_20250527143019_2
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 345
-        width: 547
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 536c40acf098a9060800000000000000
-      internalID: 6961026874961348149
+      spriteID: 2de3de3919af19420800000000000000
+      internalID: 2635162760147451602
       vertices: []
       indices: 
       edges: []
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled366_20250527143019_0: -1247479312372960071
-      Untitled366_20250527143019_1: -5684430850488458748
-      Untitled366_20250527143019_2: 6961026874961348149
+      SlimeEnemy_0: 2635162760147451602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 64218d9b67ff7fe4c8314b77ff0467ce
+guid: 81c362b59bb0ac14b8d791c301990c9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1247479312372960071
-    second: Untitled366_20250527143019_0
+      213: 2931511224955648314
+    second: turet_0
   - first:
-      213: -5684430850488458748
-    second: Untitled366_20250527143019_1
-  - first:
-      213: 6961026874961348149
-    second: Untitled366_20250527143019_2
+      213: 2794768800436648351
+    second: turet_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,30 +99,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled366_20250527143019_0
+      name: turet_0
       rect:
         serializedVersion: 2
-        x: 505
-        y: 675
-        width: 816
-        height: 216
+        x: 216
+        y: 763
+        width: 910
+        height: 479
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b47c51cc2010bee0800000000000000
-      internalID: -1247479312372960071
+      spriteID: a393d826de1dea820800000000000000
+      internalID: 2931511224955648314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled366_20250527143019_1
+      name: turet_1
       rect:
         serializedVersion: 2
-        x: 645
-        y: 507
-        width: 547
-        height: 135
+        x: 680
+        y: 490
+        width: 9
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,30 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4022d564248dc11b0800000000000000
-      internalID: -5684430850488458748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Untitled366_20250527143019_2
-      rect:
-        serializedVersion: 2
-        x: 645
-        y: 345
-        width: 547
-        height: 135
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 536c40acf098a9060800000000000000
-      internalID: 6961026874961348149
+      spriteID: f99fe5baa6309c620800000000000000
+      internalID: 2794768800436648351
       vertices: []
       indices: 
       edges: []
@@ -188,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled366_20250527143019_0: -1247479312372960071
-      Untitled366_20250527143019_1: -5684430850488458748
-      Untitled366_20250527143019_2: 6961026874961348149
+      turet_0: 2931511224955648314
+      turet_1: 2794768800436648351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

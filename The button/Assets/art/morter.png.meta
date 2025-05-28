@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: 64218d9b67ff7fe4c8314b77ff0467ce
+guid: bfe5d6ea1ad31c74694234463e102d82
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1247479312372960071
-    second: Untitled366_20250527143019_0
+      213: 9052258167117726517
+    second: morter_0
   - first:
-      213: -5684430850488458748
-    second: Untitled366_20250527143019_1
+      213: -870470515908490457
+    second: morter_1
   - first:
-      213: 6961026874961348149
-    second: Untitled366_20250527143019_2
+      213: -1446637872149433758
+    second: morter_2
+  - first:
+      213: -5436289567928805959
+    second: morter_3
+  - first:
+      213: -848785425011231684
+    second: morter_4
+  - first:
+      213: 8049808324135026206
+    second: morter_5
+  - first:
+      213: -3822380882941415170
+    second: morter_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Untitled366_20250527143019_0
+      name: morter_0
       rect:
         serializedVersion: 2
-        x: 505
-        y: 675
-        width: 816
-        height: 216
+        x: 758
+        y: 1052
+        width: 255
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9b47c51cc2010bee0800000000000000
-      internalID: -1247479312372960071
+      spriteID: 5334e2297d410ad70800000000000000
+      internalID: 9052258167117726517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled366_20250527143019_1
+      name: morter_1
       rect:
         serializedVersion: 2
-        x: 645
-        y: 507
-        width: 547
-        height: 135
+        x: 1020
+        y: 950
+        width: 225
+        height: 240
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4022d564248dc11b0800000000000000
-      internalID: -5684430850488458748
+      spriteID: 72bc2df7da77be3f0800000000000000
+      internalID: -870470515908490457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Untitled366_20250527143019_2
+      name: morter_2
       rect:
         serializedVersion: 2
-        x: 645
-        y: 345
-        width: 547
-        height: 135
+        x: 1378
+        y: 1172
+        width: 9
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +190,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 536c40acf098a9060800000000000000
-      internalID: 6961026874961348149
+      spriteID: 262f7e715828cebe0800000000000000
+      internalID: -1446637872149433758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: morter_3
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 1045
+        width: 41
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5117fc07b6e84b0800000000000000
+      internalID: -5436289567928805959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: morter_4
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 1037
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c343dab27228834f0800000000000000
+      internalID: -848785425011231684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: morter_5
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1034
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1efc06650aa6bf60800000000000000
+      internalID: 8049808324135026206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: morter_6
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 859
+        width: 273
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0780cb6dc24fac0800000000000000
+      internalID: -3822380882941415170
       vertices: []
       indices: 
       edges: []
@@ -198,9 +298,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Untitled366_20250527143019_0: -1247479312372960071
-      Untitled366_20250527143019_1: -5684430850488458748
-      Untitled366_20250527143019_2: 6961026874961348149
+      morter_0: 9052258167117726517
+      morter_1: -870470515908490457
+      morter_2: -1446637872149433758
+      morter_3: -5436289567928805959
+      morter_4: -848785425011231684
+      morter_5: 8049808324135026206
+      morter_6: -3822380882941415170
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
