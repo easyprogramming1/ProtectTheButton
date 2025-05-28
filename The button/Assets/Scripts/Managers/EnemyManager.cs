@@ -5,17 +5,21 @@ public class EnemyManager : MonoBehaviour
 {
     [SerializeField] GameObject _spliEnemy;
     [SerializeField] GameObject _spliPart;
+    [SerializeField] bool canSpawn=true;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if(canSpawn == true)
         {
             StartCoroutine(SpawnEnemiesWithDelay());
         }
+       
+        
     }
 
     private IEnumerator SpawnEnemiesWithDelay()
     {
+        canSpawn = false;
         float[] spawnXPositions = new float[] { 8f, -8f, 8f, -8f };
 
         foreach (float xPos in spawnXPositions)
@@ -26,7 +30,8 @@ public class EnemyManager : MonoBehaviour
             SpawnSplittingEnemy(spawnPos);
             yield return new WaitForSeconds(5f);
         }
-
+        yield return new WaitForSeconds(5f);
+        canSpawn = true;
     }
 
     public void SpawnSplittingEnemy(Vector3 position)
