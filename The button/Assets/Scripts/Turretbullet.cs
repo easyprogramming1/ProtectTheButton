@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Turretbullet : MonoBehaviour
 {
+    public float damage;
     public Rigidbody2D rig;
     public float speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

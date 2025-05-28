@@ -17,13 +17,19 @@ public class turret : MonoBehaviour
     public float shootspeed;
     public float side;
     public List<GameObject> theList;
+    public float damageMultiplayer;
 
 
     public Transform fromObject;
     public Transform toObject;
     public string targetTag = "Wall";
+    public void upgradeDam()
+    {
+        damageMultiplayer += 0.5f;
+    }
     public void Start()
     {
+        damageMultiplayer = 1;
         ad = GetComponent<AudioSource>();
         StartCoroutine(shoot());
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -104,7 +110,8 @@ public class turret : MonoBehaviour
         yield return new WaitForSeconds(shootspeed);
         if (enenmytargeting)
         {
-            Instantiate(bullet, shootpoint.transform.position,Quaternion.Euler(rotationer));
+            GameObject bu = Instantiate(bullet, shootpoint.transform.position,Quaternion.Euler(rotationer));
+            bu.GetComponent<Turretbullet>().damage = damageMultiplayer;
             ad.Play();
         }
         StartCoroutine(shoot());

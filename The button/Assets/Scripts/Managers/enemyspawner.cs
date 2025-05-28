@@ -13,15 +13,24 @@ public class enemyspawner : MonoBehaviour
     public float spawnspeed;
     public float enemyspawnspeed;
     public float speedchanger = 0.7f;
+    public float enenmyHP;
+    public float mintillmorhp;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        enenmyHP = 1;
         StartCoroutine(spawnspeedchanger());
         StartCoroutine(spawn());
         StartCoroutine(spawnBig());
         speedchanger = 0.7f;
         StartCoroutine(speedchang());
+        StartCoroutine(waiting());
+    }
+    public IEnumerator waiting()
+    {
+        yield return new WaitForSeconds(mintillmorhp * 60);
+        enenmyHP *= 1.5f;
+        StartCoroutine(waiting());
     }
     public IEnumerator speedchang()
     {
