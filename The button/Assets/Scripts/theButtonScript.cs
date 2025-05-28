@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class theButtonScript : MonoBehaviour
 {
+    public GameObject hammerCursor;
     public bool click;
     public GameObject plott1;
     public GameObject plott2;
@@ -32,6 +33,13 @@ public class theButtonScript : MonoBehaviour
     public bool emtyPot;
     public bool lazarBuy;
     public GameObject theplotes;
+    public AudioSource buys;
+    public Transform enemyspawner;
+    private void Start()
+    {
+        buys = enemyspawner.GetComponent<AudioSource>();
+        StartCoroutine(bruh());
+    }
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -58,21 +66,31 @@ public class theButtonScript : MonoBehaviour
         potBuy = false;
         lazarBuy = false;
     }
+    public IEnumerator bruh()
+    {
+        buys.mute = true;
+        yield return new WaitForSeconds(1);
+        buys.mute = false;
+    }
     public void buyPot()
     {
         potBuy = true;
+        buys.Play();
     }
     public void buyLazar()
     {
         lazarBuy = true;
+        buys.Play();
     }
     public void buyMorter()
     {
         morterBuy = true;
+        buys.Play();
     }
     public void buyturret()
     {
         turretBuy = true;
+        buys.Play();
     }
     public void IEXIST()
     {
@@ -124,11 +142,13 @@ public class theButtonScript : MonoBehaviour
 
     public IEnumerator DoSomething()
     {
+        hammerCursor.GetComponent<HammerCursorManager>()._SwitchToHammer = false;
         click = true;
         GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.2f);
         click = false;
         GetComponent<SpriteRenderer>().color = Color.white;
+        
         SceneManager.LoadScene("GameOverScene");
 
     }
@@ -226,6 +246,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void dead()
     {
+        
         StartCoroutine(DoSomething());
     }
 }
