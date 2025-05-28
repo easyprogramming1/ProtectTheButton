@@ -1735,7 +1735,7 @@ PrefabInstance:
       objectReference: {fileID: 186117037}
     - target: {fileID: 7466347441355753313, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
       propertyPath: m_Name
-      value: PauseScreen
+      value: GameUI
       objectReference: {fileID: 0}
     - target: {fileID: 7466347441355753313, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
       propertyPath: m_IsActive
@@ -1754,7 +1754,11 @@ PrefabInstance:
       value: theButtonScript, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6988998843760193912, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+    - {fileID: 3442486139677855866, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+    - {fileID: 5929604546894040617, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
+    - {fileID: 2215438323454452691, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76d32882069b1a5428e97fe43e6c3496, type: 3}

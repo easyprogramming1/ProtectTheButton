@@ -5,58 +5,70 @@ using UnityEngine.SceneManagement;
 public class ShopSystem : MonoBehaviour
 {
     [SerializeField] private theButtonScript theButtonScript;
+    [SerializeField] private PauseScript PauseScript;
 
     [SerializeField] int TurretCost;
     [SerializeField] int PlotCost;
     [SerializeField] int MorterCost;
     [SerializeField] int LaserCost;
-
+    [SerializeField] GameObject Shop;
+    [SerializeField] bool ShopTrue;
 
     void Start()
     {
         theButtonScript = GameObject.Find("The Button").GetComponent<theButtonScript>();
+        PauseScript = GameObject.Find("GameUI").GetComponent<PauseScript>();
+
+        ShopTrue = false;
     }
 
-    public void BuyTurret()
+    void Update()
     {
-        if (theButtonScript.coins >= TurretCost)
-        {
-            Debug.Log("Leo");
-            theButtonScript.coins -= TurretCost;
-        }
         
-    }
-
-    public void BuyPlot()
-    {
-        if (theButtonScript.coins >= PlotCost)
+        if (PauseScript.PausthingsTrue == true)
         {
-            Debug.Log("Leo");
-            theButtonScript.coins -= PlotCost;
+            Shop.SetActive(false);
+            Time.timeScale = 0;
+        }
+        else if(ShopTrue && PauseScript.PausthingsTrue == false)
+        {
+            Time.timeScale = 0;
+            Shop.SetActive(true);
+        }
+        else if (!ShopTrue && PauseScript.PausthingsTrue == false)
+        {
+            Time.timeScale = 1;
+            Shop.SetActive(false);
         }
 
-    }
-
-    public void BuyMorter()
-    {
-        if (theButtonScript.coins >= MorterCost)
+        if (Input.GetMouseButtonDown(0) && GameObject.Find("The Button").GetComponent<theButtonScript>().holdinglazar || Input.GetMouseButtonDown(0) && GameObject.Find("The Button").GetComponent<theButtonScript>().holdingmorter|| Input.GetMouseButtonDown(0) && GameObject.Find("The Button").GetComponent<theButtonScript>().holdingPot|| Input.GetMouseButtonDown(0) && GameObject.Find("The Button").GetComponent<theButtonScript>().holdingturret)
         {
-            Debug.Log("Leo");
-            theButtonScript.coins -= MorterCost;
+            Shop.SetActive(false);
+            ShopTrue = false;
         }
 
+
+
+
     }
 
-    public void BuyLaser()
+
+    public void SetShoopActiv()
     {
-        if (theButtonScript.coins >= LaserCost)
+        //ShopTrue = true;
+        
+        if (ShopTrue == false)
         {
-            Debug.Log("Leo");
-            theButtonScript.coins -= LaserCost;
+            ShopTrue = true;
+        }
+        else
+        {
+            ShopTrue = false;
         }
 
-    }
 
+
+    }
     public void print()
     {
         Debug.Log("leo");
