@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4591813526148532738}
   - component: {fileID: 2491015306029988457}
   - component: {fileID: 8756972615316241370}
-  - component: {fileID: 6299156545810470967}
+  - component: {fileID: 6124447923809758264}
   m_Layer: 0
   m_Name: SplittingPart
   m_TagString: Enemy
@@ -78,9 +78,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.99371064, g: 0.5156045, b: 0.5156045, a: 1}
+  m_Color: {r: 0.16865538, g: 1, b: 0.047169685, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -153,7 +153,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.0000000018626451}
   m_Radius: 0.49999994
---- !u!114 &6299156545810470967
+--- !u!114 &6124447923809758264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,4 +165,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59726c2171fcb31419b7e923c211f678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 3.5
+  _moveSpeed: 4
