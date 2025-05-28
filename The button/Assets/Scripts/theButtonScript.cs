@@ -92,7 +92,7 @@ public class theButtonScript : MonoBehaviour
                 }
                 if (closestEnemy.name == "plott 3")
                 {
-                    erea4.SetActive(true);
+                    erea3.SetActive(true);
                     erea2.SetActive(false);
                     erea1.SetActive(false);
                     erea4.SetActive(false);
