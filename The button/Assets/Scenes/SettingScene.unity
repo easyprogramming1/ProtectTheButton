@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 328261717}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.218, y: -0.02, z: 0}
+  m_LocalPosition: {x: -0.214, y: -0.036, z: -1}
   m_LocalScale: {x: 0.47474995, y: 0.360375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -828,7 +828,7 @@ Transform:
   m_GameObject: {fileID: 1209812587}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0.01, y: -0.3, z: -1}
   m_LocalScale: {x: 0.7, y: 0.16666667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1132,7 +1132,7 @@ Transform:
   m_GameObject: {fileID: 1381648664}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.244, y: -0.016, z: 0}
+  m_LocalPosition: {x: 0.244, y: -0.016, z: -1}
   m_LocalScale: {x: 0.44809273, y: 0.14776456, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1600,7 +1600,7 @@ Transform:
   m_GameObject: {fileID: 1747966071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.007, y: 0.266, z: 0}
+  m_LocalPosition: {x: -0.007, y: 0.266, z: -1}
   m_LocalScale: {x: 0.5204428, y: 0.30960178, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1974,7 +1974,7 @@ GameObject:
   - component: {fileID: 2049868150}
   - component: {fileID: 2049868149}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: ChatBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
