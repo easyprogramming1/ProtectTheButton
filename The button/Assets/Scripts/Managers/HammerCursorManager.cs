@@ -6,7 +6,7 @@ public class HammerCursorManager : MonoBehaviour
     private Animator _hammerAnimator;
     void Start()
     {
-        
+        Cursor.visible = false;
         _hammerAnimator = GetComponent<Animator>();
     }
 
