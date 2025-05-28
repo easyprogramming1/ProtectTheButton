@@ -30,7 +30,7 @@ public class EnemyManager : MonoBehaviour
             SpawnSplittingEnemy(spawnPos);
             yield return new WaitForSeconds(5f);
         }
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(20f);
         canSpawn = true;
     }
 
