@@ -142,6 +142,7 @@ public class theButtonScript : MonoBehaviour
     {
         hammerCursor.GetComponent<HammerCursorManager>()._SwitchToHammer = false;
         click = true;
+        deads.Play();
         GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.2f);
         click = false;
