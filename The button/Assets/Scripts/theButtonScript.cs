@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class theButtonScript : MonoBehaviour
 {
+    public GameObject hammerCursor;
     public bool click;
     public GameObject plott1;
     public GameObject plott2;
@@ -141,11 +142,13 @@ public class theButtonScript : MonoBehaviour
 
     public IEnumerator DoSomething()
     {
+        hammerCursor.GetComponent<HammerCursorManager>()._SwitchToHammer = false;
         click = true;
         GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.2f);
         click = false;
         GetComponent<SpriteRenderer>().color = Color.white;
+        
         SceneManager.LoadScene("GameOverScene");
 
     }
@@ -243,6 +246,7 @@ public class theButtonScript : MonoBehaviour
     }
     public void dead()
     {
+        
         StartCoroutine(DoSomething());
     }
 }
