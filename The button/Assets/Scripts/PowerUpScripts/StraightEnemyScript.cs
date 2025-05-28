@@ -109,6 +109,10 @@ public class StraightEnemyScript : MonoBehaviour
             button.BroadcastMessage("dead");
             Destroy(gameObject);
         }
+        if(collision.transform.tag == "splitt")
+        {
+            Destroy(gameObject);
+        }
 
     }
     

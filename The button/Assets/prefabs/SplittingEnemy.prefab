@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4604777103951038537}
   - component: {fileID: 268811309549226108}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BigEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 2401058627002551543}
   - component: {fileID: 7447381369656874962}
   - component: {fileID: 8821853207935582197}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SplittingEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
