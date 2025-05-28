@@ -17,6 +17,7 @@ public class lazerscript : MonoBehaviour
     public float side;
     public List<GameObject> theList;
     public GameObject laser;
+    public AudioSource ad;
 
 
     public Transform fromObject;
@@ -25,6 +26,7 @@ public class lazerscript : MonoBehaviour
     public bool shooting;
     public void Start()
     {
+        ad = GetComponent<AudioSource>();
         StartCoroutine(shoot());
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
@@ -107,6 +109,7 @@ public class lazerscript : MonoBehaviour
         if (enenmytargeting)
         {
             laser.SetActive(true);
+            ad.Play();
             shooting = true;
             yield return new WaitForSeconds(0.5f);
             shooting = false;

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class turret : MonoBehaviour
 {
+    public AudioSource ad;
     public Vector2 enemyPos;
     public string enemyTag = "Enemy"; // Make sure enemies are tagged "Enemy"
     public Camera mainCam;
@@ -23,6 +24,7 @@ public class turret : MonoBehaviour
     public string targetTag = "Wall";
     public void Start()
     {
+        ad = GetComponent<AudioSource>();
         StartCoroutine(shoot());
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 
@@ -103,6 +105,7 @@ public class turret : MonoBehaviour
         if (enenmytargeting)
         {
             Instantiate(bullet, shootpoint.transform.position,Quaternion.Euler(rotationer));
+            ad.Play();
         }
         StartCoroutine(shoot());
     }

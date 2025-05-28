@@ -14,9 +14,11 @@ public class morterScript : MonoBehaviour
     public Vector3 rotationer;
     public float shootspeed = 3;
     public Transform aim;
+    public AudioSource ad;
 
     public void Start()
     {
+        ad = GetComponent<AudioSource>();
         ani = GetComponent<Animator>();
         StartCoroutine(shoot());
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -45,6 +47,7 @@ public class morterScript : MonoBehaviour
         {
             Instantiate(explotion, enemyPos, Quaternion.Euler(rotationer));
             ani.SetBool("shootinge", true);
+        ad.Play();
         }
         StartCoroutine(shoot());
     }
