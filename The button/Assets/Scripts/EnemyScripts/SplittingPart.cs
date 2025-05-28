@@ -1,12 +1,12 @@
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
-public class SplittingEnemy : MonoBehaviour
+public class SplittingPart : MonoBehaviour
 {
     private Rigidbody2D _enemyRb;
     [SerializeField] float _moveSpeed;
     
-    void Start()
+    void Awake()
     {
         _enemyRb = GetComponent<Rigidbody2D>();
     }

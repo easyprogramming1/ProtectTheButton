@@ -135,10 +135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _splittingPart: {fileID: 0}
-  _moveSpeed: 0
-  _angleAdder: 0
+  _moveSpeed: 2
   _amountOfClones: 4
   allSplitparts: []
+  hp: 1
 --- !u!50 &2401058627002551543
 Rigidbody2D:
   serializedVersion: 5
