@@ -293,6 +293,8 @@ MonoBehaviour:
   rotationer: {x: 0, y: 0, z: 0}
   shootspeed: 4
   aim: {fileID: 2892857760481420150}
+  ad: {fileID: 0}
+  damagemultiplayer: 1
 --- !u!58 &1113070756819146876
 CircleCollider2D:
   m_ObjectHideFlags: 0

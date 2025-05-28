@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class morterexplotionScript : MonoBehaviour
 {
+    public float damage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,9 +22,14 @@ public class morterexplotionScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.tag == "Enemy")
+        if(collision.gameObject.layer == 8)
         {
-            Destroy(collision.gameObject);
+            
+            collision.transform.GetComponent<StraightEnemyScript>().hp -= damage;
+        }
+        else
+        {
+
         }
     }
 }

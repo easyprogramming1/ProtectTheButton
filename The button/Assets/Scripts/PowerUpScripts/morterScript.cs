@@ -15,9 +15,11 @@ public class morterScript : MonoBehaviour
     public float shootspeed = 3;
     public Transform aim;
     public AudioSource ad;
+    public float damagemultiplayer;
 
     public void Start()
     {
+        damagemultiplayer = 1;
         ad = GetComponent<AudioSource>();
         ani = GetComponent<Animator>();
         StartCoroutine(shoot());
@@ -45,7 +47,8 @@ public class morterScript : MonoBehaviour
         yield return new WaitForSeconds(shootspeed);
         if (enenmytargeting)
         {
-            Instantiate(explotion, enemyPos, Quaternion.Euler(rotationer));
+            GameObject theexplo = Instantiate(explotion, enemyPos, Quaternion.Euler(rotationer));
+            theexplo.GetComponent<morterexplotionScript>().damage = damagemultiplayer;
             ani.SetBool("shootinge", true);
         ad.Play();
         }
@@ -57,6 +60,14 @@ public class morterScript : MonoBehaviour
             ani.SetBool("shootinge", false);
         
         StartCoroutine(anima());
+    }
+    public void damUpgrade()
+    {
+        if(GameObject.Find("The Button").GetComponent<theButtonScript>().coins > 150)
+        {
+            GameObject.Find("The Button").GetComponent<theButtonScript>().coins -= 150;
+            damagemultiplayer += 0.5f;
+        }
     }
 
     GameObject GetClosestEnemy()

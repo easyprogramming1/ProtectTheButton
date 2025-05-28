@@ -11,6 +11,7 @@ public class StraightEnemyScript : MonoBehaviour
     public float speed;
     public float ogspeed;
     public bool bigenemy;
+    public float maxhp;
     public float hp;
     Rigidbody2D eig;
     public float speedchanger;
@@ -19,6 +20,7 @@ public class StraightEnemyScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        hp = maxhp * GameObject.Find("enemy spawner").GetComponent<enemyspawner>().enenmyHP;
         button = GameObject.Find("The Button").transform;
         eig = GetComponent<Rigidbody2D>();
         ogspeed = speed;
@@ -96,11 +98,11 @@ public class StraightEnemyScript : MonoBehaviour
     {
         if(collision.transform.tag == "bullet")
         {
-            hp -= 1;
+            hp -= collision.transform.GetComponent<Turretbullet>().damage;
         }
         if (collision.transform.tag == "lazer")
         {
-            hp -= 1;
+            hp -= collision.transform.GetComponent<laserscripts>().damage;
         }
         if (collision.transform.tag == "Button")
         {

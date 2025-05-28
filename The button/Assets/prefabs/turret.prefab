@@ -323,6 +323,7 @@ MonoBehaviour:
   shootspeed: 3
   side: 3
   theList: []
+  damageMultiplayer: 1
   fromObject: {fileID: 0}
   toObject: {fileID: 0}
   targetTag: Button

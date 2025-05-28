@@ -106,6 +106,7 @@ MonoBehaviour:
   speed: 0.6
   ogspeed: 0
   bigenemy: 0
+  maxhp: 3
   hp: 3
   speedchanger: 0
   splosh: {fileID: 2741659039078523016, guid: 608accf3c5fe3d94799c2d9800e29fbe, type: 3}

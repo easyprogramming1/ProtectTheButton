@@ -420,7 +420,7 @@ SpriteRenderer:
   m_SortingOrder: 1000
   m_Sprite: {fileID: -839707116475405877, guid: c9bd257c1e443714ab201aedb3ed245c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 10.17, y: 2.63}
@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 2666234109706009144}
   - component: {fileID: 4575357588085185618}
   - component: {fileID: 719857249001150183}
+  - component: {fileID: 8262615355338686403}
   m_Layer: 0
   m_Name: laser
   m_TagString: lazer
@@ -563,3 +564,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8262615355338686403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8805684913407025134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8e919f78bd4a474f908b281893d098f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
