@@ -35,8 +35,10 @@ public class theButtonScript : MonoBehaviour
     public GameObject theplotes;
     public AudioSource buys;
     public Transform enemyspawner;
+    public AudioSource deads;
     private void Start()
     {
+        deads = GetComponent<AudioSource>();
         buys = enemyspawner.GetComponent<AudioSource>();
         StartCoroutine(bruh());
     }
@@ -75,22 +77,18 @@ public class theButtonScript : MonoBehaviour
     public void buyPot()
     {
         potBuy = true;
-        buys.Play();
     }
     public void buyLazar()
     {
         lazarBuy = true;
-        buys.Play();
     }
     public void buyMorter()
     {
         morterBuy = true;
-        buys.Play();
     }
     public void buyturret()
     {
         turretBuy = true;
-        buys.Play();
     }
     public void IEXIST()
     {
@@ -144,6 +142,7 @@ public class theButtonScript : MonoBehaviour
     {
         hammerCursor.GetComponent<HammerCursorManager>()._SwitchToHammer = false;
         click = true;
+        deads.Play();
         GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.2f);
         click = false;
@@ -158,6 +157,7 @@ public class theButtonScript : MonoBehaviour
         {
             holdingPot = true;
             coins -= 50;
+            buys.Play();
         }
         if (holdingPot && Input.GetMouseButtonDown(0))
         {
@@ -181,6 +181,8 @@ public class theButtonScript : MonoBehaviour
         {
             holdingturret = true;
             coins -= 100;
+
+            buys.Play();
         }
         if (holdingturret && Input.GetMouseButtonDown(0))
         {
@@ -204,6 +206,7 @@ public class theButtonScript : MonoBehaviour
         {
             holdingmorter = true;
             coins -= 150;
+            buys.Play();
         }
         if (holdingmorter && Input.GetMouseButtonDown(0))
         {
@@ -227,6 +230,7 @@ public class theButtonScript : MonoBehaviour
         {
             holdinglazar = true;
             coins -= 150;
+            buys.Play();
         }
         if (holdinglazar && Input.GetMouseButtonDown(0))
         {
